@@ -1,0 +1,26 @@
+
+#login
+POST http://localhost:3000/api/auth/login HTTP/1.1
+content-type: application/json
+
+{
+    "email":"thoains@gmail.com",
+    "password": "123456"
+}
+
+### login
+POST http://localhost:3000/api/auth/address HTTP/1.1
+content-type: application/json
+
+{
+    "dataSigned":[
+        229, 200,  62, 153, 152,  30, 157,  13, 133,  84,  83,
+        116, 118, 238, 235, 174, 152, 122, 172, 156,   6, 114,
+        171,  28,  21,  64, 203,  76, 166, 189,  59, 204, 228,
+        182, 204, 171,  31, 183, 117,  24,  26,  49, 254, 189,
+        69, 167, 151, 149, 221, 201,  24, 217, 225, 175, 141,
+        166, 183,  46,  98,  16,  84, 249,  19,   7
+        ],
+    "message": "login",
+    "address":  "GSLD5SvEhNT5pdCdtMb213sWmMUpVV9CuNvYrgrTAHsr"
+}
