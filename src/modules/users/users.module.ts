@@ -1,4 +1,4 @@
-import { User } from './user.entity';
+import { Users } from './user.entity';
 import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
@@ -7,7 +7,7 @@ import { ActivityLogsModule } from 'src/modules/activitylogs/activity-logs.modul
 import { ConfigService } from '@nestjs/config';
 import { OtpService } from './opt.service';
 @Module({
-  imports:[ TypeOrmModule.forFeature([User]), ActivityLogsModule],
+  imports:[ TypeOrmModule.forFeature([Users]), ActivityLogsModule],
   providers: [UsersService, ConfigService, OtpService
     // UsersService,
     // {

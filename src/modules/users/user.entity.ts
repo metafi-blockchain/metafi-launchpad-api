@@ -7,7 +7,7 @@ export enum UserRole {
   USER = 'user',
 }
 @Entity()
-export class User extends BaseEntity {
+export class Users extends BaseEntity {
   @Column({ default: '' })
   name: string;
 
@@ -16,6 +16,7 @@ export class User extends BaseEntity {
 
   @Column({ default: '' })
   address: string;
+
   @Column({ default: '' })
   email: string;
 

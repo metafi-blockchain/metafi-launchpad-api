@@ -13,7 +13,7 @@ import { APP_PIPE } from '@nestjs/core';
 
 import { CustomMiddleware } from './custom.middleware';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from './modules/users/user.entity';
+import { Users } from './modules/users/user.entity';
 import { ActivityLog } from './modules/activitylogs/activity-log.entity';
 import { ProjectModule } from './modules/ido_project/ido.module';
 import { IDOProject } from './modules/ido_project/ido.entity';
@@ -34,7 +34,7 @@ import { IDOProject } from './modules/ido_project/ido.entity';
           username: config.get<string>('DB_USER'),
           password: config.get<string>('DB_PASSWORD'),
           database: config.get<string>('DB_NAME'),
-          entities: [User, ActivityLog, IDOProject],
+          entities: [Users, ActivityLog, IDOProject],
           synchronize: config.get<string>('MODE') == 'dev', // set true for dev mode only, it will auto create table for you
         };
       },

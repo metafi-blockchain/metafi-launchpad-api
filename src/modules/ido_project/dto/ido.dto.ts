@@ -1,8 +1,42 @@
-import { IsBoolean, IsNotEmpty, IsNumber, IsString } from 'class-validator';
+import {
+  IsBoolean,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  registerDecorator,
+  ValidationOptions,
+  ValidationArguments,
+} from 'class-validator';
+
+import { Web3 } from 'web3';
+
+export function IsValidAddress(
+  property: string,
+  validationOptions?: ValidationOptions,
+) {
+  return function (object: Object, propertyName: string) {
+    registerDecorator({
+      name: 'IsValidAddress',
+      target: object.constructor,
+      propertyName: propertyName,
+      constraints: [property],
+      options: validationOptions,
+      validator: {
+        validate(value: any, args: ValidationArguments) {
+          if (value == 'TBA') return true;
+          return Web3.utils.checkAddressCheckSum(value);
+        },
+      },
+    });
+  };
+}
 
 export class CreateIDODto {
   @IsString()
   @IsNotEmpty()
+  @IsValidAddress('contract', {
+    message: 'Contract address not valid',
+  })
   contract: string;
   @IsString()
   contractVersion: string = '1.0';
