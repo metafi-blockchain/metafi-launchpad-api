@@ -17,7 +17,7 @@ export abstract class BaseService<T> implements IBaseService<T> {
   async create(data: any): Promise<T> {
     try {
       data.createdAt = new Date();
-      console.log(data)
+      // console.log(data)
       return this._repository.save(data);
     } catch (error) {
       throw new BadRequestException(

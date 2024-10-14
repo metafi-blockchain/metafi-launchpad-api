@@ -44,7 +44,7 @@ export class IdoService extends BaseService<IDOProject> {
       if (pro) throw new BadRequestException('Contract is exist');
     }
 
-    console.log('Data:', data);
+    // console.log('Data:', data);
     const project = this.repository.create({ ...data, createdAt: new Date() });
     return this.repository.save(project);
   }

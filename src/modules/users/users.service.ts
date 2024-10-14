@@ -21,7 +21,10 @@ export class UsersService {
   ) {}
 
   signup(data: SignupDto): Promise<Users> {
-    const user = this.usersRepository.create(data);
+    const user = this.usersRepository.create({
+      ...data,
+      createdAt: new Date(),
+    });
     return this.usersRepository.save(user);
   }
 
