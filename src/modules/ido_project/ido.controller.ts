@@ -17,8 +17,8 @@ import { JwtAuthGuard } from 'src/guards/jwt.auth.guard';
 export class IdoController {
   constructor(private projectService: IdoService) {}
 
-//   @UseGuards(AdminGuard)
-//   @UseGuards(JwtAuthGuard)
+  @UseGuards(AdminGuard)
+  @UseGuards(JwtAuthGuard)
   @Post('/')
   async create(@Body() createDto: CreateIDODto) {
     console.log("createDto:", createDto)

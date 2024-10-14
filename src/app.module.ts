@@ -35,7 +35,8 @@ import { IDOProject } from './modules/ido_project/ido.entity';
           password: config.get<string>('DB_PASSWORD'),
           database: config.get<string>('DB_NAME'),
           entities: [Users, ActivityLog, IDOProject],
-          synchronize: config.get<string>('MODE') == 'dev', // set true for dev mode only, it will auto create table for you
+          // synchronize: config.get<string>('MODE') == 'dev', // set true for dev mode only, it will auto create table for you
+          synchronize: false,
         };
       },
     }),
