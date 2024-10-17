@@ -12,6 +12,12 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
   app.useGlobalFilters(new HttpExceptionFilter());
+  app.useGlobalPipes(
+    new ValidationPipe({
+      disableErrorMessages: true,
+      stopAtFirstError: false,
+    }),
+  );
   // app.useGlobalInterceptors(new ResponseFormatterInterceptor());
   app.enableCors();
   swaggerSetup(app);

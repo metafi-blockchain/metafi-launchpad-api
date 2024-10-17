@@ -1,22 +1,17 @@
 import { Users } from './user.entity';
-import { MiddlewareConsumer, Module, RequestMethod } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { ActivityLogsModule } from 'src/modules/activitylogs/activity-logs.module';
 import { ConfigService } from '@nestjs/config';
 import { OtpService } from './opt.service';
+import { ActivityLogsModule } from 'src/modules/activitylogs/activity-logs.module';
+
 @Module({
-  imports:[ TypeOrmModule.forFeature([Users]), ActivityLogsModule],
-  providers: [UsersService, ConfigService, OtpService
-    // UsersService,
-    // {
-    //   provide: APP_INTERCEPTOR, 
-    //   useClass: CurrentUserInterceptor 
-    // } //config use all app 
-  ],
+  imports: [TypeOrmModule.forFeature([Users]), ActivityLogsModule],
+  providers: [UsersService, ConfigService, OtpService],
   controllers: [UsersController],
-  exports: [UsersService]
+  exports: [UsersService],
 })
 export class UsersModule {}
 // export class UsersModule {

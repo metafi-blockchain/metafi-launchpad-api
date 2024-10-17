@@ -1,5 +1,5 @@
-interface IResponse{
-    code: number
-    message: string
-    data: any
+interface IResponse {
+  code: number;
+  message: string;
+  data: any;
 }

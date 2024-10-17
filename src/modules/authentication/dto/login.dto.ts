@@ -1,54 +1,48 @@
-
-
-import {IsEmail, IsNotEmpty, IsString} from 'class-validator'
+import { IsEmail, IsNotEmpty} from 'class-validator';
 export class AuthSocialDto {
-    @IsEmail()
-    email: string;
+  @IsEmail()
+  email: string;
 
-    provider?: string
+  provider?: string;
 
-    avatar?: string
+  avatar?: string;
 
-    displayName?: string
-
+  displayName?: string;
 }
 
 export class AuthDto {
+  @IsEmail()
+  email: string;
 
-    @IsEmail()
-    email: string;
-
-    @IsNotEmpty()
-    password: string;
+  @IsNotEmpty()
+  password: string;
 }
 
 export class AuthSignatureDto {
-
-    @IsNotEmpty()
-    dataSigned: Array<any>;
-    @IsNotEmpty()
-    message: string;
-    @IsNotEmpty()
-    address: string;
+  @IsNotEmpty()
+  dataSigned: Array<any>;
+  @IsNotEmpty()
+  message: string;
+  @IsNotEmpty()
+  address: string;
 }
 
 export interface IMessageSinged {
-	messageBytes: string, 
-	signature: string
+  messageBytes: string;
+  signature: string;
 }
 
 export interface IVerifyEmail {
-	opt: string
+  opt: string;
 }
 
 export class SignupDto {
+  @IsEmail()
+  email: string;
 
-    @IsEmail()
-    email: string;
+  @IsNotEmpty()
+  password: string;
 
-    @IsNotEmpty()
-    password: string;
-
-    @IsNotEmpty()
-    name: string;
+  @IsNotEmpty()
+  name: string;
 }
