@@ -13,7 +13,7 @@ import { AdminGuard } from 'src/guards/admin.auth.guard';
 import { CreateIDODto } from './dto/ido.dto';
 import { JwtAuthGuard } from 'src/guards/jwt.auth.guard';
 
-@Controller('ido')
+@Controller('projects')
 export class IdoController {
   constructor(private projectService: IdoService) {}
 
@@ -21,7 +21,7 @@ export class IdoController {
   @UseGuards(JwtAuthGuard)
   @Post('/')
   async create(@Body() createDto: CreateIDODto) {
-    console.log("createDto:", createDto)
+    console.log('createDto:', createDto);
     return this.projectService.create(createDto);
   }
   @UseGuards(AdminGuard)
