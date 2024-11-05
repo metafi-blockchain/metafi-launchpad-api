@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: launchpad-config
+  namespace: metafi-system
+data:
+  TOKEN_VERIFY_DURATION_TIME: "86400"
+  NODE_ENV: "production"
+  JTW_PRIVATE_PATH_FILE: "/app/private.pem"
+  JTW_PUBLIC_PATH_FILE: "/app/public.pem"
+  WEB3_RPC_URL: "https://long-light-pond.avalanche-testnet.quiknode.pro/35cbf62e2590b9cb8c2237bbef17157703025192/ext/bc/C/rpc/"
+  NFT_FACTORY_ADDRESS: "0xa71fea4050a4c235196e6c367c5e5c9544df45cd"
+  DEPOSIT_CONTRACT_ADDRESS: "0x89B3b8729e0e289095Ad97e24cA2c03DE44470F3"
+  MARKET_PLACE_CONTRACT_ADDRESS: "0x73E6093d458DbEf49dDE0889D8B4f65750078911"
+  GAME_CONTRACT_ADDRESS: "0xC09dE4234F046157AD2857CEE356347F0736f9fC"
+  MULTI_DELEGATE_CALL_ADDRESS: "0xf5d5ce298189bc38a867aac3119ae135821071f7"
+  GAME_GATE_WAY_URL: "https://gateway.kingdoms.game"
