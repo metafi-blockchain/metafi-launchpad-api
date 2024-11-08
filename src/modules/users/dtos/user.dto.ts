@@ -1,32 +1,26 @@
-import { Expose, Transform } from "class-transformer";
-import { IsNotEmpty } from "class-validator";
-import { IUser } from "src/interface/user.interface";
-import { IMessageSinged } from "src/modules/authentication/dto/login.dto";
+import { Expose, Transform } from 'class-transformer';
+import { IsNotEmpty } from 'class-validator';
+import { IUser } from 'src/interface/user.interface';
 
+export class UserDto implements IUser {
+  @Expose()
+  id: number;
 
-export class UserDto implements IUser{
+  @Expose()
+  email: string;
 
-    @Expose()
-    id: number;
+  @Expose()
+  name: string;
 
-    @Expose()
-    email: string;
+  @Expose()
+  version?: number;
 
-    @Expose()
-    name:string;
-
-    @Expose()
-    version?: number ;
-
-    @Expose()
-    role:string;
-
+  @Expose()
+  role: string;
 }
 
 export class ChangePwdDto {
-
-    new_password: string;
-    old_password: string;
-    confirm_new_password: string;
+  new_password: string;
+  old_password: string;
+  confirm_new_password: string;
 }
-

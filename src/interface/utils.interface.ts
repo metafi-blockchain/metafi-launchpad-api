@@ -1,13 +1,13 @@
 interface IClassConstructor {
-    new (...args: any[]): {};  // Input make sure class
+  new (...args: any[]): {}; // Input make sure class
 }
 
-interface IDaoBuildQuery{
-    query: Object,
-    total: Object
+interface IDaoBuildQuery {
+  query: Object;
+  total: Object;
 }
 
-interface IEventSQSQueue{
-    event: string,
-    data: any
-  }
+interface IEventSQSQueue {
+  event: string;
+  data: any;
+}
