@@ -5,7 +5,7 @@ metadata:
   namespace: metafi-system
 spec:
   selector:
-    app: enteral-kingdom-api
+    app: launchpad-api
   ports:
     - protocol: TCP
       port: 3000

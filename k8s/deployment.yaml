@@ -25,11 +25,11 @@ spec:
             name: enteral-kingdom-secrets
         volumeMounts:
         - name: private-key-volume
-          mountPath: /app/private.pem
-          subPath: private.pem
+          mountPath: /app/auth.private.pem
+          subPath: auth.private.pem
         - name: public-key-volume
-          mountPath: /app/public.pem
-          subPath: public.pem
+          mountPath: /app/auth.public.pem
+          subPath: auth.public.pem
       volumes:
       - name: private-key-volume
         secret:
