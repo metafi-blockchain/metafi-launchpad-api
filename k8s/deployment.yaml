@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: launchpad-api
+  namespace: metafi-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: launchpad-api
+  template:
+    metadata:
+      labels:
+        app: launchpad-api
+    spec:
+      containers:
+      - name: launchpad-api
+        image: metafi/launchpad-api:0.1.0
+        ports:
+        - containerPort: 3000
+        envFrom:
+        - configMapRef:
+            name: launchpad-config-map
+        - secretRef:
+            name: launchpad-secrets
+        volumeMounts:
+        - name: private-key-volume
+          mountPath: /app/auth.private.pem
+          subPath: auth.private.pem
+        - name: public-key-volume
+          mountPath: /app/auth.public.pem
+          subPath: auth.public.pem
+      volumes:
+      - name: private-key-volume
+        secret:
+          secretName: private-key
+      - name: public-key-volume
+        secret:
+          secretName: public-key     
