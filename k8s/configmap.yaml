@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: launchpad-config
+  name: launchpad-config-map
   namespace: metafi-system
 data:
   TOKEN_VERIFY_DURATION_TIME: "86400"
