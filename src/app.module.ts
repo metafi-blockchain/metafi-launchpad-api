@@ -15,6 +15,8 @@ import { Users } from './modules/users/user.entity';
 import { EventsModule } from './modules/events/events.module';
 import { Events } from './modules/events/event.entity';
 import { ActivityLog } from './modules/activitylogs/activity-log.entity';
+import { ProjectModule } from './modules/ido_project/ido.module';
+import { IDOProject } from './modules/ido_project/ido.entity';
 
 @Module({
   imports: [
@@ -32,18 +34,19 @@ import { ActivityLog } from './modules/activitylogs/activity-log.entity';
           username: config.get<string>('DB_USER'),
           password: config.get<string>('DB_PASSWORD'),
           database: config.get<string>('DB_NAME'),
-          entities: [Users, ActivityLog, Events],
+          entities: [Users, ActivityLog, Events, IDOProject],
           synchronize: config.get<string>('MODE') == 'DEV', // set true for dev mode only, it will auto create table for you
           // synchronize: false,
         };
       },
     }),
     UsersModule,
+    ProjectModule,
     JWTAuthModule,
     EventsModule,
     ActivityLogsModule,
   ],
-  controllers: [],
+  // controllers: [],
   providers: [
     ConfigService,
     {
