@@ -57,7 +57,7 @@ export class IdoController {
 
   @Get('/')
   async getAllProject() {
-    console.log('getAllProject');
+    // console.log('getAllProject');
 
     return this.projectService.findAll();
   }

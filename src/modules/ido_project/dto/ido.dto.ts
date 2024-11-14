@@ -33,6 +33,10 @@ export function IsValidAddress(
 
 export class CreateIDODto {
   @IsString()
+  network: string;
+  @IsNotEmpty()
+  chainId: string;
+  @IsString()
   @IsNotEmpty()
   @IsValidAddress('contract', {
     message: 'Contract address not valid',
