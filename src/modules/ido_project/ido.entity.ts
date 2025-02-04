@@ -5,16 +5,22 @@ import { BaseEntity } from '../commons/base.entity';
 
 @Entity()
 export class IDOProject extends BaseEntity {
+  
   @Column({ default: '' })
   network: string;
+
   @Column({ default: '' })
   chainId: string;
+
   @Column({ unique: true })
   contract: string;
+
   @Column({ default: '1.0' })
   contractVersion: string;
+
   @Column({ default: 0 })
   rate: number;
+  
   @Column({ default: '' })
   raiseTokenAddress: string;
   @Column({ default: '' })

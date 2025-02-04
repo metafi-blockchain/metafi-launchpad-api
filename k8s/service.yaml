@@ -10,5 +10,5 @@ spec:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-      nodePort: 32001  # Nếu muốn chỉ định cụ thể
-  type: NodePort  # Đổi thành LoadBalancer nếu triển khai trên Cloud Provider
+      nodePort: 32001  
+  type: NodePort 
