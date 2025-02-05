@@ -3,7 +3,7 @@ POST http://localhost:3000/api/projects HTTP/1.1
 content-type: application/json
 
 {    
-    "email":"1223@gmail.com",
+    "email":"thoains@gmail.com",
     "password": "123456"
 }
 
@@ -12,7 +12,7 @@ POST http://localhost:3000/api/auth/signup HTTP/1.1
 content-type: application/json
 
 {    
-    "email":"12233@gmail.com",
+    "email":"thoains@gmail.com",
     "password": "123456",
     "name": "test"
 }

@@ -30,26 +30,29 @@ content-type: application/json
 ##### require admin ######
 
 ###  Create
-POST http://localhost:3000/api/ido HTTP/1.1
+POST http://localhost:3000/api/projects HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInZlcnNpb24iOjAsImlhdCI6MTcxOTQ3ODgzMCwiZXhwIjoxNzE5NTY1MjMwfQ.hVj9yjlZnw3B7c7c2QBy_RmvJ4jVaEuAtde2x0cjXu8uk8qfiN4nShsLSBokqpPLb00-1daujXkJE7erQ0HC1CCGe6QXmli_4LRWw0yHKq4cox7yYCM_ZTmq95rO93GWtNwsHRtCLAirSBIn3da6X-JBaKUlvHho41aqB7gkp3Ei8xXfc9OXDuLjp-2EsAjLUi1IJcAB9WB1iuvmtx8DmaGiVu9rIQ34Fi9HxowAQDFMmQEsz2WCAHdwrRSPLTPsMouITRH94xN3p6fz965gjyk-54Ind1Hfu3uV5tQdtqfEpAIHGzPnoahvggjicDErTxcss0Z15hZOdHfmkXT8mw
+Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyYmYzYzdhNy00ZGY2LTRjMjktYTI0NS04M2FkZDEyMmI2MjciLCJ2ZXJzaW9uIjowLCJpYXQiOjE3Mzg2ODUwNTUsImV4cCI6MTczODc3MTQ1NX0.vh3V1b0OIVIEbC0Nw0p6L27urhD2SmdENhmqDiLFchRq6XpKpI2dU4FHQXGbn1gVQQaqyGTmIA4WBLqOBJPENobLoXKSKXzoLOGiuCsXuwNTTf3sVcS_3evV3xJ_hN2GeiHK7exHcwgsfMfxmYvoUzFBwOh0N3oGWctMB6FKQfrvTYw-8xz8NoqjDYzmoTrAB8xcAyCxiYLg13oydn3ronQCLs3OnqVgEoyW7I9tzdcWqZfV3BEZcHFYUjl_Dkbt6kvqIffusy3mDB4wefQs_wgS8Ka4mIJ9Gn4USpYWgKQmaK9SH5juYFkyyVCVtihtbQzgcINKYWYg9m4wFKBBrw
 
 {
-	"contract": "TBA",
+    
+	"contract": "0xddc734f7e06378dbc741c5349ab902a8cd738c5b",
     "contractVersion": "1.0",
     "raiseTokenAddress": "BUJST4dk6fnM5G3FnhTVc3pjxRJE7w2C5YL9XgLbdsXW",
-    "raiseTokenDecimals": 6,
+    "raiseTokenDecimals": 18,
+    "network": "EVM",
+    "chainId": 97,
     "raiseTokenSymbol": "USDC",
     "releaseTokenAddress":"TBA",
-    "releaseTokenSymbol": "BLST",
-    "releaseTokenDecimals": 9,
+    "releaseTokenSymbol": "FOMO",
+    "releaseTokenDecimals": 18,
     "isPrivate": true,
-    "rate": 1000000,
-    "description": "TEST 2",
+    "rate": 0,
+    "description": "esigned to make AI Agent token creation easy. Customize your agent, harness the power of AI.",
     "telegram": "https://t.me/Blast_Fi",
-    "logo": "https://i.ibb.co/HXR58JW/BD20.jpg",
+    "logo": "https://i.ibb.co/my5tBgY/FOMO.jpg",
     "medium": "https://medium.com/test",
-    "name": "TEST 2",
+    "name": "FOMO",
     "totalSupply": 1000000,
     "twitter": "https://twitter.com/Blast_Fi",
     "website": "https://blastfi.io/",

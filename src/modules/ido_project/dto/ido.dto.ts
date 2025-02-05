@@ -38,9 +38,9 @@ export class CreateIDODto {
   chainId: string;
   @IsString()
   @IsNotEmpty()
-  @IsValidAddress('contract', {
-    message: 'Contract address not valid',
-  })
+  // @IsValidAddress('contract', {
+  //   message: 'Contract address not valid',
+  // })
   contract: string;
   @IsString()
   contractVersion: string = '1.0';
